@@ -141,11 +141,11 @@ async function checkDuelResults(playerId, computerId) {
 
     if(playerCard.winOf.includes(computerId)) {
         duelResults = "WIN"
-        await playAudio(win)
+        await playAudio('win')
         state.score.playerScore++
     } else if (playerCard.loseOf.includes(computerId)){
         duelResults = "LOSE"
-        await playAudio(lose)
+        await playAudio('lose')
         state.score.computerScore++
     }
 
