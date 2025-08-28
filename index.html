@@ -20,10 +20,16 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="src/styles/main.css">
 
+    <!-- faveicon -->
+    <link rel="shortcut icon" href="src/assets/favicon/Favicon.ico" type="image/x-icon">
+
     <title>Yu-gi-oh Jo-ken-po Edition</title>
 </head>
 
 <body>
+    <audio id="bgm" loop>
+        <source src="src/assets/audios/egyptian_duel.mp3" type='audio/mp3'>
+    </audio>
     <div class="bg-video">
         <video class="video" autoplay loop muted>
             <source src="src/assets/video/yugi.mp4" type="video/mp4">
@@ -33,7 +39,7 @@
     <div class="container">
         <div class="container__left framed-golden-2">
             <div class="score-box frame">
-                <span id="score-points">Win: 0 | Lose: 0</span>
+                <span id="score-points">Win: 0<br>Lose: 0</span>
             </div>
             <div class="menu-avatar">
                 <img id="card-image">
@@ -60,7 +66,7 @@
                         </div>
                     </div>
                     <div class="versus-bottom">
-                        <button id="next-duel" class="rpgui-button" onclick="reset">GANHOU</button>
+                        <button id="next-duel" class="rpgui-button" onclick="resetDuel()">GANHOU</button>
                     </div>
                 </div>
 
